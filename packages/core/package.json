@@ -16,11 +16,11 @@
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
   },
   "devDependencies": {
+    "@heydan/eslint-config-ds": "*",
     "@heydan/tsconfig": "*",
     "@types/react": "^18.0.9",
     "@types/react-dom": "^18.0.4",
     "eslint": "^8.15.0",
-    "eslint-config-ds": "*",
     "postcss": "^8.4.16",
     "react": "^18.1.0",
     "tsup": "^5.10.1",
