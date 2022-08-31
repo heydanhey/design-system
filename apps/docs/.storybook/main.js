@@ -9,6 +9,7 @@ module.exports = {
   },
   async viteFinal(config, { configType }) {
     // customize the Vite config here
+    config.base = process.env.BASE_URL || config.base;
     return {
       ...config,
       resolve: {
