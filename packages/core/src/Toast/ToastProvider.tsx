@@ -18,19 +18,23 @@ export interface ToastProviderProps {
   children: React.ReactNode;
 }
 
-export interface ToastProps {
-  id: string;
+interface ToastProps {
   content: string;
+  id: string;
+  autoDismissDelay: number;
 }
 
 export const ToastProvider = (props: ToastProviderProps) => {
   const [toasts, setToasts] = useState<ToastProps[]>([]);
 
-  const open = (content: string) => {
-    console.log(content)
+  const open = ({ content, autoDismissDelay }: { content: string, autoDismissDelay?: number }) => {
     setToasts((currentToasts) => [
       ...currentToasts,
-      { id: generateUEID(), content },
+      {
+        id: generateUEID(),
+        content,
+        autoDismissDelay: autoDismissDelay || 0
+      },
     ]);
   }
 
@@ -41,8 +45,6 @@ export const ToastProvider = (props: ToastProviderProps) => {
 
   const contextValue = useMemo(() => ({ open }), []);
 
-  console.log(contextValue, 'xx')
-
   return (
     <ToastContext.Provider value={contextValue}>
       {props.children}
@@ -50,7 +52,11 @@ export const ToastProvider = (props: ToastProviderProps) => {
       {createPortal(
         <div className="toasts-wrapper">
           {toasts.map((toast) => (
-            <Toast key={toast.id} close={() => close(toast.id)}>
+            <Toast
+              key={toast.id}
+              close={() => close(toast.id)}
+              autoDismissDelay={toast.autoDismissDelay}
+            >
               {toast.content}
             </Toast>
           ))}

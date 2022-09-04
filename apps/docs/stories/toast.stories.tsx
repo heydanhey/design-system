@@ -12,7 +12,10 @@ function ToastExample() {
   const toast = useToast();
 
   const showToast = () => {
-    toast?.open(`Toast created from child component! ${Math.random() * 2332}`);
+    toast?.open({
+      content: `Toast created from child component! ${Math.random() * 2332}`,
+      autoDismissDelay: 3000
+    })
   }
 
   return <button onClick={showToast}>Show Toast</button>

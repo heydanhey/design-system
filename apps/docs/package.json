@@ -9,6 +9,7 @@
     "clean": "rm -rf .turbo && rm -rf node_modules"
   },
   "dependencies": {
+    "@heydan/art": "*",
     "@heydan/core": "*",
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
