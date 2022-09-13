@@ -1,4 +1,4 @@
-# @heydan/core
+# @heydan/tsconfig
 
 ## 0.1.0
 
@@ -6,9 +6,3 @@
 
 - Test
 - 60908d8: Small Updates
-
-## 0.0.1
-
-### Patch Changes
-
-- bce7ea3: Test
