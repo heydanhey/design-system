@@ -1,5 +1,7 @@
-import Compass from './Compass'
+import Compass from './Compass';
+import Heart from './Heart';
 
 export {
-  Compass
+  Compass,
+  Heart
 }

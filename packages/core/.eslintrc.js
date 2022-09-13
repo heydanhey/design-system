@@ -1,4 +1,4 @@
 module.exports = {
   root: true,
-  extends: ["heydan"],
+  extends: ["@heydan/eslint-config-ds"],
 };
