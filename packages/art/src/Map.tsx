@@ -1,0 +1,24 @@
+import * as React from "react"
+
+export default function Map(props: React.ComponentProps<"svg">) {
+  return (
+    <svg
+      width="32"
+      height="32"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 16 16"
+      {...props}
+    >
+      <path d="M4,0v3h1v1h-1v8h1v1h-1v2h3v-1h1v-3h-1v-1h-2v-1h1v-1h1v-1h1v-1h1v-1h1v-1h1v-2h1v-2h-8Z" fill="#edb60e" />
+      <path d="M8,14h1v-3h1v-3l1-.5L11,5h1v-3h-1v2h-1v0v1h-1v1h-1v1h-1v1h-1v1h-1v1h2v1h1v3Z" fill="#fff" />
+      <rect width="1" height="1" rx="0" ry="0" transform="translate(7 11)" fill="#f45c05" />
+      <rect width="1" height="1" rx="0" ry="0" transform="translate(5 11)" fill="#f45c05" />
+      <rect width="1" height="1" rx="0" ry="0" transform="translate(7 6)" fill="#f45c05" />
+      <rect width="1" height="1" rx="0" ry="0" transform="translate(5 6)" fill="#f45c05" />
+      <rect width="1" height="1" rx="0" ry="0" transform="translate(8 4)" fill="#f45c05" />
+      <rect width="1" height="1" rx="0" ry="0" transform="translate(6 4)" fill="#f45c05" />
+      <rect width="1" height="1" rx="0" ry="0" transform="matrix(2 0 0 1 6 2)" fill="#f45c05" />
+      <rect width="1" height="1" rx="0" ry="0" transform="translate(9 2)" fill="#f45c05" />
+    </svg>
+  )
+}
